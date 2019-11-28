@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         ReadNames rn = new ReadNames();
         Parser parser = new Parser(rn.getNamesBuffer());
+        System.out.println("#ofNames: "+rn.getNamesBuffer().size());
         if (rn.getNamesBuffer().size() <= 0)
             exit(1);
         switch(args[0]) {

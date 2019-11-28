@@ -28,7 +28,10 @@ class ReadNames {
             for(Element element : urlNames) {
                 String res = element.getElementsByTag("a").text().toLowerCase();
                 res = (Character.toString(res.charAt(0))).toUpperCase()+res.substring(1);
-                namesBuffer.add(res);
+                if (res.contains(" "))
+                    res = res.substring(0, res.indexOf(' '));
+                if (!namesBuffer.contains(res) && res.matches("^[a-zA-Z]+$"))
+                    namesBuffer.add(res);
             }
         }
     }
