@@ -1,3 +1,4 @@
+package main.java;
 import static java.lang.System.exit;
 
 public class Main {
