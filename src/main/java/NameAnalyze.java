@@ -75,7 +75,7 @@ public class NameAnalyze {
                     String res = element.getElementsByTag("a").text().toLowerCase();
                     res = (Character.toString(res.charAt(0))).toUpperCase()+res.substring(1);
                     res = res.replaceAll("[(0-9)]", "").trim();
-                    if (!namesBuffer.contains(res) && res.matches("^[a-zA-Z ]+$"))
+                    if (!namesBuffer.contains(res) && res.matches("[a-zA-Z ]+"))
                         namesBuffer.add(res);
                 }
             }
